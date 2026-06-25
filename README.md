@@ -19,4 +19,20 @@ A Python-based web scraper that extracts book titles and pricing from an e-comme
 
 ---
 
-## 📈 Task 2: 
+## 📉 Task 2: Data Visualization Dashboard
+
+An interactive visualization dashboard built to clean and analyze the e-commerce book data harvested in Task 1. This script parses raw records and dynamically creates statistical distributions and ranking charts to uncover product insights.
+
+### 🛠️ Technologies Used
+* **Python 3.14**
+* **Pandas** (Data Manipulation)
+* **Matplotlib** (Plot Window Layouts)
+* **Seaborn** (Statistical Data Visualization Density Plots)
+
+### 📊 Dashboard Features
+* **Price Distribution Analytics:** Implements a Seaborn Kernel Density Estimate (KDE) histogram to map out market price frequencies.
+* **Top 5 Rankings:** Dynamically processes and displays horizontal bar charts identifying the most premium pricing thresholds.
+
+### 🚀 Technical Challenges & Solutions
+* **The Deprecation Warning:** Ran into syntax notices regarding explicit `hue` attributes and unmapped tick coordinates while managing categorical bar labels.
+* **The Solution:** Patched the pipeline by defining `hue='Book Title'`, suppressing unnecessary legend tags with `legend=False`, and explicitly setting tick locations using `axes[1].set_yticks()` before drawing labels. This eliminated all terminal alerts.
