@@ -19,7 +19,21 @@ A Python-based web scraper that extracts book titles and pricing from an e-comme
 
 ---
 
-## 📉 Task 2: Data Visualization Dashboard
+## 🔍 Task 2: Exploratory Data Analysis (EDA)
+
+A data profiling script designed to investigate the structural integrity, quality, and core metrics of the raw web-scraped dataset. It automates data preprocessing and outputs statistical summaries directly to the terminal console to validate data before visualization or downstream pipelines.
+
+### 🛠️ Technologies Used
+* **Python 3.14**
+* **Pandas** (Data Inspection, Manipulation & Mathematical Summary)
+
+### 🚀 Technical Challenges & Solutions
+* **The Float Casting Bug:** Raw data from the CSV originally contained string formatting, symbols, and whitespace, which threw execution exceptions during standard mathematical analysis blocks.
+* **The Solution:** Implemented a robust data type-casting step using `.str.replace()` and `.astype(float)` to isolate numeric arrays, enabling seamless generation of foundational metrics such as count, mean, and standard deviation.
+
+---
+
+## 📉 Task 3: Data Visualization Dashboard
 
 An interactive visualization dashboard built to clean and analyze the e-commerce book data harvested in Task 1. This script parses raw records and dynamically creates statistical distributions and ranking charts to uncover product insights.
 
